@@ -1,0 +1,10 @@
+# 绝不提交真实 Token
+.env
+*.token
+
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+reports/
