@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    width: 900px;
+    background: #0d1117;
+    font-family: "Segoe UI", "Microsoft YaHei", -apple-system, sans-serif;
+    padding: 28px 30px;
+    color: #c9d1d9;
+  }
+  .hdr { display:flex; align-items:baseline; gap:12px; margin-bottom:4px; }
+  .logo { font-size:26px; }
+  .title { font-size:23px; font-weight:700; color:#fff; letter-spacing:.5px; }
+  .sub { font-size:13px; color:#7d8590; }
+  .lead {
+    font-size:14px; color:#8b949e; margin:10px 0 20px;
+    padding-bottom:16px; border-bottom:1px solid #21262d;
+  }
+  .lead b { color:#e6edf3; font-weight:600; }
+
+  .card {
+    background:#161b22; border:1px solid #30363d; border-radius:10px;
+    padding:14px 18px; margin-bottom:12px;
+  }
+  .card.pin  { border-left:3px solid #58a6ff; }
+  .card.meal { border-left:3px solid #3fb950; }
+  .card.pay  { border-left:3px solid #d29922; }
+  .card.cal  { border-left:3px solid #f85149; }
+
+  .row { display:flex; align-items:center; gap:10px; }
+  .k { font-size:11px; color:#6e7681; letter-spacing:1.5px; margin-bottom:7px; text-transform:uppercase; }
+  .store { font-size:16px; color:#e6edf3; font-weight:600; }
+  .moondot { color:#58a6ff; }
+  .meta { font-size:12.5px; color:#7d8590; margin-top:5px; }
+  .meta .hot { color:#f0883e; }
+
+  .item { font-size:15.5px; color:#e6edf3; }
+  .price { margin-left:auto; font-size:15.5px; color:#3fb950; font-weight:600; }
+
+  .big { font-size:30px; font-weight:700; color:#3fb950; }
+  .unit { font-size:14px; color:#7d8590; font-weight:400; }
+  .verified {
+    margin-left:auto; font-size:11.5px; color:#3fb950;
+    border:1px solid #238636; border-radius:20px; padding:3px 11px;
+  }
+
+  .kcal { font-size:26px; font-weight:700; color:#f85149; }
+  .ok {
+    margin-left:10px; font-size:12px; color:#3fb950;
+    border:1px solid #238636; border-radius:20px; padding:2px 9px;
+  }
+  .run { font-size:15px; color:#d29922; margin-top:9px; }
+  .bar { height:5px; background:#21262d; border-radius:3px; margin-top:11px; overflow:hidden; }
+  .bar > i { display:block; height:100%; width:77%; background:linear-gradient(90deg,#3fb950,#d29922); border-radius:3px; }
+
+  .foot {
+    display:flex; gap:22px; margin-top:18px; padding-top:14px;
+    border-top:1px solid #21262d; font-size:12px; color:#6e7681;
+  }
+  .foot b { color:#c9d1d9; font-weight:600; }
+</style>
+</head>
+<body>
+
+  <div class="hdr">
+    <span class="logo">🌙</span>
+    <span class="title">麦麦夜宵官</span>
+    <span class="sub">mcd-nightowl · 23:30 夜宵时段</span>
+  </div>
+  <div class="lead">
+    夜深了，帮你算清楚 —— <b>还有哪家店开着</b>、<b>怎么点最合适</b>、<b>吃完要跑几公里</b>
+  </div>
+
+  <div class="card pin">
+    <div class="k">门店</div>
+    <div class="row">
+      <span class="moondot">📍</span>
+      <span class="store">麦当劳上海徐家汇餐厅</span>
+    </div>
+    <div class="meta">
+      天钥桥路1号 · 距你 355m · 营业 00:00–23:59 · <span class="hot">29 分钟后打烊</span>
+    </div>
+  </div>
+
+  <div class="card meal">
+    <div class="k">推荐组合</div>
+    <div class="row">
+      <span class="item">那么大鸡排（椒盐风味）</span>
+      <span class="price">¥14.0</span>
+    </div>
+  </div>
+
+  <div class="card pay">
+    <div class="k">价格</div>
+    <div class="row">
+      <span class="big">¥14.0<span class="unit"> 到手</span></span>
+      <span class="verified">✓ 服务端校验</span>
+    </div>
+  </div>
+
+  <div class="card cal">
+    <div class="k">热量</div>
+    <div class="row">
+      <span class="kcal">385 kcal</span>
+      <span class="ok">未超 500 上限</span>
+    </div>
+    <div class="bar"><i></i></div>
+    <div class="run">🏃 ≈ 慢跑 6.2 km　（60kg，约 46 分钟）</div>
+  </div>
+
+  <div class="foot">
+    <span>单次决策 <b>20 次</b> MCP 调用</span>
+    <span>价格校验 <b>20/20</b> 通过</span>
+    <span>候选 <b>20</b> 个组合</span>
+    <span>数据来源 <b>麦当劳 MCP</b></span>
+  </div>
+
+</body>
+</html>
